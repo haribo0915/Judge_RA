@@ -1,0 +1,3 @@
+r1:- \project_{UID} \select_{Date >= '2019-10-10' and Date <= '2019-10-11'} Listen;
+r2:- (\project_{UID} Listen) \diff r1;
+\project_{UName} (User \join r2);

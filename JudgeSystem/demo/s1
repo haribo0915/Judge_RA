@@ -1,0 +1,6 @@
+select distinct Singer
+from Song
+where Singer not in (select Singer
+                                     from Song
+                                      where Date >= '2019-10-10' and Date <= '2019-10-11')
+

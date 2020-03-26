@@ -1,0 +1,4 @@
+r1 :- \rename_{SID, count} \aggr_{SID: count(UID)} Listen;
+r2 :- \rename_{count} \aggr_{max(count)} r1;
+r3 :- r1 \join_{r1.count = r2.count} r2;
+\project_{SName} (Song \join_{Song.SID=r3.SID} r3);

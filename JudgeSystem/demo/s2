@@ -1,0 +1,3 @@
+select distinct Singer
+from Song
+where Singer not in (select Singer from Song where category <> 'category1')
